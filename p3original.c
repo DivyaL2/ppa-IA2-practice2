@@ -33,6 +33,7 @@ int main()
   x=input_number();
   y=is_composite(x);
   output(x,y);
+  return 0;
 }  
 
 
