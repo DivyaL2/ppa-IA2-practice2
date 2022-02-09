@@ -1,33 +1,54 @@
 #include<stdio.h>
-int input()
+int input_array_size()
 {
-  int x;
-  printf("enter the number\n");
-  scanf("%d",&x);
-  return x;
+  int a;
+  printf("enter the size of the array\n");
+  scanf("%d",&a);
+  return a;
 }
-int gcd(int a,int b)
+void input_array(int n,int *a)
 {
-  for(int i=1;i<=a && i<=b,i++)
+  printf("enter the array values\n");
+  int count =0;
+
+  for(int i=0;i<=a[n];i++)
   {
-    if(a%i==0 && b%i==0)
-    {
-      gcd=i;
-    }
+    if(a[i]%i==0)
+    count++;
+    scanf("%d",&a[i])
   }
-  return gcd;
 }
-void output(int a,int b,int gcd)
+int  sum_composite_numbers(int n,int a[n],int )
 {
-  printf("The gcd of %d and %d is %d\n",a,b,gcd);
+  int sum=0,count=0;
+  
+
+  for(int i=1;i<n;i++)
+  {
+    
+    
+
+      if(count>2)
+      {
+      sum=sum+a[i];
+      }
+    
+  }
+  return sum;
+}
+void output(int sum)
+{
+  printf("The sum is %d",sum);
+
 }
 int main()
 {
-  int a,b,c;
-  a=input();
-  b=input();
-  c=gcd(a,b);
-  output(a,b,c);
+  int n,sum;
+  n=input_array_size();
+  int a[n];
+  input_array(n,a);
+  sum=sum_composite_numbers(n,a);
+  output(sum);
+  return 0;
+
 }
-
-
