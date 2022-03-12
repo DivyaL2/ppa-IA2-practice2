@@ -4,29 +4,30 @@ struct _triangle
 {
   float b,h,area;
 };
-typedef struct _triangle  
-struct _triangle input_triangle(struct _triangle *b,struct _triangle  *h)
+typedef struct _triangle Triangle;
+Triangle input_triangle(Triangle a)
 {
   
-  printf("enter the value of base and height\n");
-  scanf("%f %f", b,h);
+  printf("enter the value of a);
+  scanf("%f",&a);
 }
-struct _triangle find_area(struct _triangle b,struct _triangle h)
+Triangle find_area(Triangle b ,Triangle h)
 { 
-   struct _triangle area ;
+   Triangle area ;
    area =(b*h)/2;
   
   return area;
 }
-void output(struct _triangle a,struct _triangle b,struct _triangle area)
+void output(Triangle area)
 {
   printf("the area of a triangle is %f",area);
 
 }
 int main()
 {
-  struct _triangle a,b,c;
-  input_triangle(&a,&b);
+  Triangle c,base,height;
+   base =input_triangle();
+   height=input_triangle();
   c =find_area(a,b);
   output(a,b,c);
   return 0;
