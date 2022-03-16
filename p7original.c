@@ -12,7 +12,7 @@ Triangle input_triangle()
   scanf("%f %f",&k.b,&k.h);
   return k;
 }
-Triangle find_area(Triangle k)
+Triangle find_area(Triangle *k)
 {
   
   k->area=0.5 * k->b * k->h;
