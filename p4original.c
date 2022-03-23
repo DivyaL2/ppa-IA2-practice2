@@ -6,7 +6,7 @@ int input_array_size()
   scanf("%d",&a);
   return a;
 }
-void input_array(int n,int *a)
+void input_array(int n,int a[n])
 {
   printf("enter the array values\n");
   
